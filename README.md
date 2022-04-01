@@ -1,1 +1,10 @@
-This is a starting point for your full-stack project. I've already added the server from the express API walkthrough. Included in the client is a simple React app that you will have to 
+CREATE USER 'chirprapp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+GRANT ALL PRIVILEGES ON chirpr.* TO 'chirprapp'@'localhost';
+
+
+SELECT * FROM chirpr.chirps;
+use chirpr;
+SELECT * from chirps where chirps.id = 10;
+DELETE from chirps where chirps.id = 8;
+INSERT INTO chirps (userid, content, location) values (2, "Hello people Hello people Hello people.", "bham")
